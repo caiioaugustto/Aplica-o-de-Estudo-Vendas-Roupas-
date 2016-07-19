@@ -162,6 +162,8 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\VendaDAO.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Context.cs" />
     <Compile Include="Entidades\Venda.cs" />
