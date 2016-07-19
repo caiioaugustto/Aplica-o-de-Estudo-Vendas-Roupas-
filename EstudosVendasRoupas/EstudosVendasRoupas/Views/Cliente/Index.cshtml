@@ -1,0 +1,77 @@
+﻿@model EstudosVendasRoupas.Entidades.Cliente
+
+@using (Html.BeginForm("AdicionarCliente", "Cliente", FormMethod.Post))
+{
+    <br />
+
+    @Html.LabelFor(a => a.Nome, "Nome*")
+    @Html.TextBoxFor(a => a.Nome, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Nome)
+
+    <br />
+
+    @Html.LabelFor(a => a.CPF, "CPF/MF*")
+    @Html.TextBoxFor(a => a.CPF, new { @id = "cpf", @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.CPF)
+
+    <br />
+
+    @Html.LabelFor(a => a.Endereco, "Endereço*")
+    @Html.TextBoxFor(a => a.Endereco, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Endereco)
+
+    <br />
+
+    @Html.LabelFor(a => a.CEP, "CEP*")
+    @Html.TextBoxFor(a => a.CEP, new { @id = "cep", @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.CEP)
+
+    <br />
+
+    @Html.LabelFor(a => a.Cidade, "Cidade*")
+    @Html.TextBoxFor(a => a.Cidade, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Cidade)
+
+    <br />
+
+    @Html.LabelFor(a => a.Estado, "Estado*")
+    @Html.TextBoxFor(a => a.Estado, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Estado)
+
+    <br />
+
+    @Html.LabelFor(a => a.Telefone, "Telefone*")
+    @Html.TextBoxFor(a => a.Telefone, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Telefone)
+
+    <br />
+
+    @Html.LabelFor(a => a.Email, "Email*")
+    @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Email)
+
+    <br />
+
+    @Html.LabelFor(a => a.Senha, "Senha")
+    @Html.TextBoxFor(a => a.Senha, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Senha)
+
+    <br />
+
+    <input type="submit" value="Cadastrar" />
+
+    @section Scripts {
+
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.maskedinput.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                $("#cpf").mask("999.999.999-99");
+                $("#cep").mask("99999-999");
+            });
+
+        </script>
+    }
+}
